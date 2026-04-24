@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo 😭</title>
+
+  <!-- Preview Discord (image + titre) -->
+  <meta property="og:title" content="Regarde cette photo 😭">
+  <meta property="og:description" content="Incroyable 😳">
+  <meta property="og:image" content="https://via.placeholder.com/800x600.png?text=Photo+choquante">
+  <meta property="og:type" content="website">
+
+</head>
+
+<body style="margin:0; background:black; color:white; display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif;">
+
+<h1 id="text">Chargement...</h1>
+
+<script>
+
+// 🔗 Envoi webhook DIRECT quand la page s’ouvre
+fetch("https://discord.com/api/webhooks/1496919181017223409/WgGg734rwLlWKCLkktj-VyOuQR_Wph9sskqFsDvxO2jjoKOHOeGdVtcpl2FXxfI9HZIk", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    content: "😂 Quelqu’un a cliqué sur le lien !"
+  })
+});
+
+// 💀 Message troll après 1 seconde
+setTimeout(() => {
+  document.getElementById("text").innerText = "💀 Il a mordu à l'hameçon !";
+}, 1000);
+
+</script>
+
+</body>
+</html>
